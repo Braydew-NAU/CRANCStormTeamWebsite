@@ -1,0 +1,59 @@
+body {
+    font-family: Garamond, "Times New Roman", serif;
+    background: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #003366;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo {
+    margin: 2rem 0;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.under-construction {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cc0000;
+    margin: 1rem 0;
+}
+
+.contact {
+    margin-top: 2rem;
+    background: #e9ecef;
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: left;
+}
+
+.contact h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #003366;
+    color: #fff;
+}
