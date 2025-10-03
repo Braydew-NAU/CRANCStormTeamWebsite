@@ -1,59 +1,179 @@
-body {
-    font-family: Garamond, "Times New Roman", serif;
-    background: #f4f4f9;
-    color: #333;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-header {
-    background: #003366;
-    color: #fff;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #f9fdf9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #2e8b57, #3cb371);
     padding: 1rem 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
-.logo {
-    margin: 2rem 0;
-}
-
-.logo img {
-    max-width: 200px;
-}
-
-.content {
-    padding: 2rem;
-}
-
-.under-construction {
-    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    color: #cc0000;
-    margin: 1rem 0;
-}
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Intro Logo */
+  .intro {
+    text-align: center;
+    padding: 2rem 0;
+  }
 
-.contact {
-    margin-top: 2rem;
-    background: #e9ecef;
+  .intro p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+  }
+  
+  .logo {
+    max-width: 180px;
+  }
+  
+  /* Sponsor + Team Layout */
+  .sponsor-team-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem 5%;
+    gap: 4rem;
+  }
+  
+  /* Sponsor Section */
+  .sponsor-section {
+    flex: 1;
+  }
+  
+  .sponsor-card {
+    background: #e6f9ee;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .sponsor-card img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .sponsor-card h3 {
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Team Section */
+  .team-section {
+    flex: 2;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .team-card {
+    background: #ffffff;
+    border-radius: 12px;
     padding: 1rem;
-    border-radius: 8px;
-    display: inline-block;
-    text-align: left;
-}
-
-.contact h2 {
-    margin-top: 0;
-    color: #003366;
-}
-
-footer {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+  }
+  
+  .team-card h3 {
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-card a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .team-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
     margin-top: 3rem;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background: #003366;
-    color: #fff;
-}
+  }
+  
+  .team-intro {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f0faf5; /* subtle light background */
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .team-intro h2 {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-intro .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .team-intro .intro-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
