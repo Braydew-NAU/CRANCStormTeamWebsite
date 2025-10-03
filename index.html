@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRANCStorm Capstone Project</title>
+  <title>CRANCStorm Capstone</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Navigation Bar -->
   <header>
     <div class="header-container">
       <h1>CRANCStorm Capstone Project</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="project.html">Project</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="project.html">Project Details</a></li>
           <li><a href="technologies.html">Technologies</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="documents.html">Documents</a></li>
+          <li><a href="archive.html">Archive</a></li>
         </ul>
       </nav>
     </div>
@@ -26,61 +25,78 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Intro Section -->
     <section class="intro">
       <img src="CRANCStorm.png" alt="CRANCStorm Logo" class="logo">
-      <p>
-        Our Capstone project focuses on developing innovative solutions in partnership with <strong>CRANC</strong>. 
-        Explore our pages to meet the team, learn about the project, and follow our development process.
-      </p>
+
+    <!-- Team Section -->
+     <div class="intro-text-bubble">
+      <h2>Meet the Team</h2>
+      <p class="subtitle">Building smarter routes for better travel</p>
+      <p class="intro-text">
+        We are the CRANCStorm team, working with CRANC to design a tool that helps people 
+        choose routes based on their comfort level with traffic. Our goal is to make travel safer, 
+        greener, and more efficient.
+      </div>
     </section>
 
-    <!-- Sponsor + Team Side by Side -->
-    <section class="sponsor-team-container">
+    <!-- Team + Sponsor + Mentor Grid -->
+    <section class="team-grid-container">
+      <div class="team-grid">
+        <!-- Team Members -->
+        <div class="team-card">
+          <img src="BraydonHeadshot.jpeg" alt="Braydon Lamoreaux">
+          <h3>Braydon Lamoreaux</h3>
+          <p><strong>Role:</strong> Team Leader & Customer Communicator & Coder</p>
+          <p><a href="mailto:bkl93@nau.edu">bkl93@nau.edu</a></p>
+        </div>
 
-      <!-- Sponsor Section -->
-      <div class="sponsor-section">
-        <h2>Project Sponsor</h2>
-        <div class="sponsor-card">
-          <img src="SponsorHeadshot.jpg" alt="Sponsor Headshot">
-          <h3>Steven R. Gehrke</h3>
-          <p><strong>Company:</strong> CRANC</p>
-          <p><strong>Website:</strong> <a href="#">Sponsor Link</a></p>
+        <div class="team-card">
+          <img src="KristopherHeadshot.jpg" alt="Kristopher Thomas">
+          <h3>Kristopher Thomas</h3>
+          <p><strong>Role:</strong> Architect & Coder</p>
+          <p><a href="mailto:kjt335@nau.edu">kjt335@nau.edu</a></p>
+        </div>
+
+        <div class="team-card">
+          <img src="EthanHeadshot.JPG" alt="Ethan Ferguson">
+          <h3>Ethan Ferguson</h3>
+          <p><strong>Role:</strong> Release Manager & Coder</p>
+          <p><a href="mailto:ewf25@nau.edu">ewf25@nau.edu</a></p>
+        </div>
+
+        <div class="team-card">
+          <img src="NoeliaHeadshot.JPG" alt="Noelia Canela">
+          <h3>Noelia Canela</h3>
+          <p><strong>Role:</strong> Recorder & Coder</p>
+          <p><a href="mailto:nsc229@nau.edu">nsc229@nau.edu</a></p>
+        </div>
+
+        <!-- Sponsor -->
+        <div class="team-card sponsor">
+          <img src="SponsorHeadshot.jpg" alt="Steven Gehrke">
+          <h3>Steven Gehrke</h3>
+          <p><strong>Project Sponsor</strong></p>
+          <p>Website: <a href="https://stevenrgehrke.com/">https://stevenrgehrke.com/</a></p>
+        </div>
+
+        <!-- Mentor -->
+        <div class="team-card">
+          <img src="MentorHeadshot.jpg" alt="Mentor Name">
+          <h3>Mentor Name</h3>
+          <p><strong>Role:</strong> Project Mentor</p>
+          <p>Supports the team with technical expertise, feedback, and ensures professional project practices.</p>
+          <p><a href="mailto:mentor@nau.edu">mentor@nau.edu</a></p>
         </div>
       </div>
-
-      <!-- Team Section -->
-      <div class="team-section">
-        <h2>Our Team</h2>
-        <div class="team-grid">
-          <div class="team-card">
-            <img src="BraydonHeadshot.jpeg" alt="Braydon Lamoreaux">
-            <h3>Braydon Lamoreaux</h3>
-            <p><a href="mailto:bkl93@nau.edu">bkl93@nau.edu</a></p>
-          </div>
-          <div class="team-card">
-            <img src="KristopherHeadshot.jpg" alt="Kristopher Thomas">
-            <h3>Kristopher Thomas</h3>
-            <p><a href="mailto:kjt335@nau.edu">kjt335@nau.edu</a></p>
-          </div>
-          <div class="team-card">
-            <img src="EthanHeadshot.JPG" alt="Ethan Ferguson">
-            <h3>Ethan Ferguson</h3>
-            <p><a href="mailto:ewf25@nau.edu">ewf25@nau.edu</a></p>
-          </div>
-          <div class="team-card">
-            <img src="NoeliaHeadshot.JPG" alt="Team Member 4">
-            <h3>Noelia Canela</h3>
-            <p><a href="mailto:nsc229@nau.edu">nsc229@nau.edu</a></p>
-          </div>
-        </div>
-      </div>
-
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 CRANCStorm Team. All rights reserved.</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© 2025 CRANCStorm Team. All rights reserved.</p>
+      </div>
+    </footer>
 </body>
 </html>
