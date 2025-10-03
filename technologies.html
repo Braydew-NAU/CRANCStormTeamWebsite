@@ -1,0 +1,96 @@
+<!-- Core Technology Stack -->
+<section class="sponsor-team-container" style="display: block; padding: 2rem 10%;">
+  <h2 style="color: #2e8b57; margin-bottom: 1.5rem; font-size: 1.6rem;">Core Technology Stack (PERN)</h2>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>PostgreSQL</h3>
+    <p>
+      PostgreSQL serves as our primary relational database management system for the CRANCStorm cycling routing application. We chose PostgreSQL for several compelling reasons: its robust support for geospatial data through the PostGIS extension is essential for storing and querying route information, cyclist location data, and map coordinates. PostgreSQL's ACID compliance ensures data integrity when handling concurrent user requests and route calculations, which is critical for a routing application where accuracy is paramount. Additionally, its excellent performance with complex queries makes it ideal for computing optimal cycling routes based on multiple parameters such as elevation, distance, road type, and traffic conditions. In our final product, PostgreSQL stores user profiles, saved routes, preferences, and all geospatial data that powers the routing engine.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Express.js</h3>
+    <p>
+      Express.js functions as our backend web application framework, providing the server-side logic that powers the CRANCStorm API. We selected Express.js because of its minimalist, unopinionated design that gives us flexibility in structuring our application while maintaining simplicity. Express handles all HTTP requests from our React frontend, processes routing calculations, manages user authentication, and communicates with our PostgreSQL database. Its middleware architecture allows us to easily implement features like request logging, error handling, and authentication checks. Express also integrates seamlessly with Node.js, enabling us to write our entire backend in JavaScript, which promotes code consistency across our full stack and allows team members to work on both frontend and backend with the same language proficiency.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>React</h3>
+    <p>
+      React serves as our frontend JavaScript library, responsible for building the user interface of the CRANCStorm cycling routing application. We chose React for its component-based architecture, which allows us to break down complex UI elements—such as interactive maps, route planners, and the isochrone visualization tool—into reusable, maintainable components. React's virtual DOM ensures smooth performance even when rendering complex map visualizations and real-time route updates. The extensive ecosystem of React libraries, particularly for mapping (such as React-Leaflet or Mapbox GL JS), gives us powerful tools to create an intuitive, interactive experience for cyclists. In our application, React handles everything users see and interact with, from the route input forms to the dynamic map displays showing optimal cycling paths and isochrone ranges.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Node.js</h3>
+    <p>
+      Node.js is our JavaScript runtime environment that executes our server-side code. We selected Node.js because its event-driven, non-blocking I/O model is perfectly suited for handling the multiple concurrent requests typical of a routing application—users requesting routes, calculating isochrones, and fetching map data simultaneously. Node.js allows us to use JavaScript across our entire stack, streamlining development and enabling code sharing between frontend and backend (such as validation logic or utility functions). Its extensive npm package ecosystem provides access to thousands of libraries that accelerate development, from mapping utilities to authentication packages. Node.js powers our Express server, manages connections to our PostgreSQL database, and handles the computational tasks required for route optimization and isochrone calculations.
+    </p>
+  </div>
+</section>
+
+<!-- Development Tools -->
+<section class="sponsor-team-container" style="display: block; padding: 2rem 10%;">
+  <h2 style="color: #2e8b57; margin-bottom: 1.5rem; font-size: 1.6rem;">Development Tools</h2>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Git & GitHub</h3>
+    <p>
+      Git serves as our distributed version control system, with GitHub as our remote repository host. We chose this combination because it enables seamless collaboration among our four team members, allowing us to work on different features simultaneously without conflicts. GitHub's branching model lets us develop new features in isolation before merging them into the main codebase, ensuring stability in our production code. The platform's pull request system facilitates code reviews, where team members can examine and discuss changes before integration, improving overall code quality. GitHub also provides issue tracking for managing bugs and feature requests, and serves as a backup of our entire codebase. In our workflow, each team member commits their changes regularly, and we use feature branches to organize development of major components like the isochrone editor or route optimization algorithms.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Visual Studio Code</h3>
+    <p>
+      Visual Studio Code is our primary integrated development environment (IDE) used by all team members. We standardized on VS Code because of its excellent support for JavaScript and React development, including syntax highlighting, IntelliSense code completion, and integrated debugging tools for both frontend and backend code. The built-in Git integration allows us to commit, push, and pull changes without leaving the editor. VS Code's extension marketplace provides powerful add-ons such as ESLint for code quality, Prettier for consistent formatting, and React Developer Tools for debugging our components. The Live Share extension enables real-time collaborative coding sessions, which has been invaluable for pair programming and troubleshooting complex issues. Its lightweight nature and cross-platform compatibility ensure all team members have the same development experience regardless of their operating system.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>npm (Node Package Manager)</h3>
+    <p>
+      npm serves as our package manager, handling all JavaScript dependencies for both our frontend and backend. We rely on npm to install and manage the numerous libraries our application depends on, including React, Express, PostgreSQL drivers, mapping libraries, authentication packages, and development tools. npm's package.json file acts as a manifest of our project's dependencies, ensuring that all team members and deployment environments have identical library versions, preventing "works on my machine" issues. The npm scripts feature allows us to define custom commands for common tasks like starting the development server, running tests, building the production bundle, and deploying the application. This centralized dependency management is crucial for maintaining consistency across our development workflow.
+    </p>
+  </div>
+</section>
+
+<!-- Mapping & Geospatial Libraries -->
+<section class="sponsor-team-container" style="display: block; padding: 2rem 10%;">
+  <h2 style="color: #2e8b57; margin-bottom: 1.5rem; font-size: 1.6rem;">Mapping & Geospatial Libraries</h2>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Leaflet / Mapbox GL JS</h3>
+    <p>
+      For rendering interactive maps in our React application, we utilize either Leaflet with React-Leaflet or Mapbox GL JS. These mapping libraries were chosen because they provide robust, performant map visualization capabilities essential for a cycling routing application. They handle the rendering of base maps, route overlays, markers for start and end points, and most importantly, the isochrone visualizations that show cyclists how far they can travel within specific time intervals. These libraries support custom styling to match our application's design, allow for interactive features like panning and zooming, and integrate smoothly with our React components. The mapping libraries communicate with our backend API to fetch route data and isochrone calculations, then display them in an intuitive, visually appealing format that helps cyclists plan their rides effectively.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>PostGIS</h3>
+    <p>
+      PostGIS is a spatial database extension for PostgreSQL that we use to handle all geospatial operations in our application. We chose PostGIS because it transforms PostgreSQL into a powerful geographic information system, enabling us to perform complex spatial queries efficiently. PostGIS allows us to store geographic data types (points, lines, polygons), calculate distances between coordinates, find nearest points of interest, determine route intersections, and compute isochrones based on network analysis. This extension is fundamental to our routing engine, as it processes the geographic calculations needed to determine optimal cycling routes considering factors like distance, elevation changes, and road network connectivity. Without PostGIS, handling the geometric and geographic computations required for accurate routing would be significantly more complex and less performant.
+    </p>
+  </div>
+</section>
+
+<!-- Additional Tools -->
+<section class="sponsor-team-container" style="display: block; padding: 2rem 10%;">
+  <h2 style="color: #2e8b57; margin-bottom: 1.5rem; font-size: 1.6rem;">Additional Development Tools</h2>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>Postman</h3>
+    <p>
+      Postman serves as our API development and testing tool, allowing us to test our Express.js backend endpoints without needing to build the frontend interface first. We chose Postman because it provides an intuitive interface for crafting HTTP requests with various methods (GET, POST, PUT, DELETE), headers, and body parameters. This is particularly valuable when developing and debugging our routing API endpoints, authentication flows, and database interactions. Postman allows us to save collections of requests, automate testing workflows, and share API documentation among team members. During development, we use Postman to verify that our backend correctly processes route requests, returns appropriate isochrone data, and handles error cases gracefully before integrating with the React frontend.
+    </p>
+  </div>
+
+  <div class="team-card" style="margin-bottom: 2rem; text-align: left; max-width: 100%;">
+    <h3>pgAdmin</h3>
+    <p>
+      pgAdmin is our graphical administration tool for PostgreSQL, providing a user-friendly interface to manage our database. We selected pgAdmin because it simplifies database management tasks that would otherwise require complex SQL commands. Through pgAdmin, we can visually design and modify database schemas, create and manage tables for storing user data and route information, execute and optimize SQL queries, and monitor database performance. The tool's query editor with syntax highlighting and auto-completion helps us write and test complex geospatial queries using PostGIS functions. pgAdmin's visualization capabilities also allow us to inspect our data and verify that routes and isochrones are being stored and retrieved correctly, which is essential for debugging and ensuring data integrity throughout development.
+    </p>
+  </div>
+</section>
