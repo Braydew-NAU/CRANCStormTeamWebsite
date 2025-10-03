@@ -1,6 +1,4 @@
-/* -------------------------- */
 /* General Reset & Body Setup */
-/* -------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* NYC Street Map Background Overlay */
+/* Street Map Background Overlay */
 body::before {
   content: "";
   position: fixed;
@@ -29,9 +27,7 @@ body::before {
   z-index: -1;
 }
 
-/* -------------------------- */
 /* Header / Navigation        */
-/* -------------------------- */
 .header-container {
   background-color: rgba(60, 60, 60, 0.95); /* softer black / streetlight black */
   color: white;
@@ -91,9 +87,7 @@ body::before {
   color: #32CD32; /* green light for active link */
 }
 
-/* -------------------------- */
 /* Main Content Sections      */
-/* -------------------------- */
 main {
   max-width: 1000px;
   margin: 30px auto;
@@ -142,7 +136,10 @@ main {
 }
 
 .intro-text-bubble, 
-.team-intro-content {
+.team-intro-content,
+.doc-card,
+.pres-card,
+.vid-card {
   background-color: rgba(255, 255, 255, 0.5); /* 50% translucent white */
   padding: 20px;
   border-radius: 15px;
@@ -159,18 +156,17 @@ main {
   color: #333;
 }
 
-/* -------------------------- */
 /* Team Grid Section          */
-/* -------------------------- */
 .team-grid-container {
   display: flex;
   justify-content: center;
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
+  justify-content: center;
   width: 100%;
 }
 
@@ -182,6 +178,9 @@ main {
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   text-align: center;
   transition: transform 0.2s;
+  flex: 0 0 220px;
+  max-width: 220px;
+  margin: 0 auto;
 }
 
 .team-card:hover {
@@ -218,8 +217,18 @@ main {
 
 .team-card.sponsor,
 .team-card.mentor {
-  flex: 0 0 calc(2 * 220px + 25px); /* width of 2 cards + gap */
-  max-width: 480px; /* prevent from growing too large */
+  flex: 0 0 480px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card.sponsor {
+  order: 1;
+}
+
+.team-card.mentor {
+  order: 2;
 }
 
 .team-card.sponsor img,
@@ -236,9 +245,8 @@ ul.no-bullets {
   margin: 0;
 }
 
-/* -------------------------- */
-/* Footer                     */
-/* -------------------------- */
+
+/* Footer */
 footer {
   background-color: rgba(30, 30, 30, 0.95);
   color: white;
@@ -250,19 +258,30 @@ footer {
 }
 
 /* Responsive adjustments for medium screens */
-@media (max-width: 900px) {
+@media (max-width: 995px) and (min-width: 600px) {
+  .team-card {
+    flex: 0 0 45%;
+    max-width: 45%;
+    margin: 10px auto;
+  }
+
   .team-card.sponsor,
   .team-card.mentor {
-    flex: 0 0 calc(2 * 180px + 20px); /* slightly smaller for medium screens */
-    max-width: 400px;
+    flex: 0 0 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 /* For small screens, stack normally */
 @media (max-width: 600px) {
+  .team-card,
   .team-card.sponsor,
   .team-card.mentor {
     flex: 0 0 100%;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
